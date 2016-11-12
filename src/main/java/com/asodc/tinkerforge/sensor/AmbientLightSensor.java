@@ -8,11 +8,11 @@ import com.tinkerforge.BrickletAmbientLightV2;
  */
 public class AmbientLightSensor extends Sensor {
 
-    public BrickletAmbientLightV2 sensor;
+    private BrickletAmbientLightV2 sensor;
 
     public AmbientLightSensor(String uid, Connection connection) {
-        this.uid = uid;
-        sensor = new BrickletAmbientLightV2(this.uid, connection.getIPConnection());
+        super(uid, connection);
+        this.sensor = new BrickletAmbientLightV2(this.uid, this.connection.getIPConnection());
         connect(connection);
         initSensorListener();
     }

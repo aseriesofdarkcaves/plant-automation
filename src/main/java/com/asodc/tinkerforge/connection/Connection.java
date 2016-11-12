@@ -10,14 +10,14 @@ import java.io.IOException;
  */
 public class Connection {
 
-    public String host;
-    public int port;
-    public IPConnection ipConnection;
+    private String host;
+    private int port;
+    private IPConnection ipConnection;
 
     public Connection(String host, int port) {
         this.host = host;
         this.port = port;
-        ipConnection = new IPConnection();
+        this.ipConnection = new IPConnection();
     }
 
     public String getHost() {

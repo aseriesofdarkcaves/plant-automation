@@ -8,11 +8,11 @@ import com.tinkerforge.BrickletTemperature;
  */
 public class TemperatureSensor extends Sensor {
 
-    public BrickletTemperature sensor;
+    private BrickletTemperature sensor;
 
     public TemperatureSensor(String uid, Connection connection) {
-        this.uid = uid;
-        sensor = new BrickletTemperature(this.uid, connection.getIPConnection());
+        super(uid, connection);
+        sensor = new BrickletTemperature(this.uid, this.connection.getIPConnection());
         connect(connection);
         initSensorListener();
     }

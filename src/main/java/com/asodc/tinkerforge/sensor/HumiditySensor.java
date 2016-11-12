@@ -8,11 +8,11 @@ import com.tinkerforge.BrickletHumidity;
  */
 public class HumiditySensor extends Sensor {
 
-    public BrickletHumidity sensor;
+    private BrickletHumidity sensor;
 
     public HumiditySensor(String uid, Connection connection) {
-        this.uid = uid;
-        sensor = new BrickletHumidity(this.uid, connection.getIPConnection());
+        super(uid, connection);
+        this.sensor = new BrickletHumidity(this.uid, this.connection.getIPConnection());
         connect(connection);
         initSensorListener();
     }
