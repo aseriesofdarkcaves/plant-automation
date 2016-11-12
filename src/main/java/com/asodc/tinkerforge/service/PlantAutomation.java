@@ -23,7 +23,7 @@ public class PlantAutomation {
         attachHumidity();
         attachMoisture();
         attachAmbientLight();
-        loop();
+        startService();
     }
 
     private static void attachAmbientLight() {
@@ -46,7 +46,7 @@ public class PlantAutomation {
         TemperatureSensor temperature = new TemperatureSensor(TEMPERATURE_SENSOR_UID, temperatureConnection);
     }
 
-    private static void loop() {
+    private static void startService() {
         while (true) {}
     }
 }

@@ -22,10 +22,10 @@ public class Tinkerforge {
         connect();
         initTemperatureSensorListener();
         setCallbackPeriod(CALLBACK_PERIOD);
-        loop();
+        startService();
     }
 
-    private static void loop() {
+    private static void startService() {
         while (true) {}
     }
 
