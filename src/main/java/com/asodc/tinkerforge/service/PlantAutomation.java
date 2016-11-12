@@ -46,7 +46,7 @@ public class PlantAutomation {
 
     private static void attachTemperature() throws IOException, AlreadyConnectedException {
         Connection temperatureConnection = new Connection(HOST, PORT);
-        TemperatureSensor temperature = new TemperatureSensor(TEMPERATURE_SENSOR_UID, temperatureConnection);
+        TemperatureSensor temperatureSensor = new TemperatureSensor(TEMPERATURE_SENSOR_UID, temperatureConnection);
     }
 
     private static void startService() {
