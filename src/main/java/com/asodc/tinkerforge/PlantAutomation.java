@@ -47,6 +47,6 @@ public class PlantAutomation {
     }
 
     private static void loop() {
-        while(true) {}
+        while (true) {}
     }
 }

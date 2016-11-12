@@ -26,7 +26,7 @@ public class Tinkerforge {
     }
 
     private static void loop() {
-        while(true) {}
+        while (true) {}
     }
 
     private static void setCallbackPeriod(long callbackPeriod) {
