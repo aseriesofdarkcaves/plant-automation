@@ -1,7 +1,6 @@
 package com.asodc.tinkerforge.sensor;
 
 import com.asodc.tinkerforge.connection.Connection;
-import com.asodc.tinkerforge.listener.SensorListener;
 import com.tinkerforge.AlreadyConnectedException;
 
 import java.io.IOException;

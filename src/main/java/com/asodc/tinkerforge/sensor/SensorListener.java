@@ -1,4 +1,4 @@
-package com.asodc.tinkerforge.listener;
+package com.asodc.tinkerforge.sensor;
 
 /**
  * Created by aseriesofdarkcaves on 12.11.2016.
