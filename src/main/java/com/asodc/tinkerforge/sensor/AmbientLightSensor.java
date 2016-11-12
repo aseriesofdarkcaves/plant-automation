@@ -6,7 +6,7 @@ import com.tinkerforge.BrickletAmbientLightV2;
 /**
  * Created by aseriesofdarkcaves on 11.11.2016.
  */
-public class AmbientLightSensor extends Sensor implements SensorListener {
+public class AmbientLightSensor extends Sensor {
 
     public BrickletAmbientLightV2 sensor;
 

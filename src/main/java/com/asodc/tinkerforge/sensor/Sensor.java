@@ -1,6 +1,7 @@
 package com.asodc.tinkerforge.sensor;
 
 import com.asodc.tinkerforge.connection.Connection;
+import com.asodc.tinkerforge.listener.SensorListener;
 import com.tinkerforge.AlreadyConnectedException;
 
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by aseriesofdarkcaves on 05.11.2016.
  */
-public abstract class Sensor {
+public abstract class Sensor implements SensorListener {
 
     public String uid;
 

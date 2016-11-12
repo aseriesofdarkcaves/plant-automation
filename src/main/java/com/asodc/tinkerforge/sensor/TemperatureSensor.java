@@ -6,7 +6,7 @@ import com.tinkerforge.BrickletTemperature;
 /**
  * Created by aseriesofdarkcaves on 05.11.2016.
  */
-public class TemperatureSensor extends Sensor implements SensorListener {
+public class TemperatureSensor extends Sensor {
 
     public BrickletTemperature sensor;
 

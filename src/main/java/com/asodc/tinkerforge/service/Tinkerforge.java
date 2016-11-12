@@ -1,4 +1,4 @@
-package com.asodc.tinkerforge;
+package com.asodc.tinkerforge.service;
 
 import com.tinkerforge.*;
 import java.io.IOException;

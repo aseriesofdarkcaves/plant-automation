@@ -1,4 +1,4 @@
-package com.asodc.tinkerforge;
+package com.asodc.tinkerforge.service;
 
 import com.asodc.tinkerforge.connection.Connection;
 import com.asodc.tinkerforge.sensor.AmbientLightSensor;

@@ -6,7 +6,7 @@ import com.tinkerforge.BrickletHumidity;
 /**
  * Created by aseriesofdarkcaves on 11.11.2016.
  */
-public class HumiditySensor extends Sensor implements SensorListener {
+public class HumiditySensor extends Sensor {
 
     public BrickletHumidity sensor;
 
