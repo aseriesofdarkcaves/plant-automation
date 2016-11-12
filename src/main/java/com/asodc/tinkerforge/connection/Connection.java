@@ -20,19 +20,17 @@ public class Connection {
         this.ipConnection = new IPConnection();
     }
 
-    public String getHost() {
-        return host;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
     public IPConnection getIPConnection() {
         return ipConnection;
     }
 
-    public void connect() throws IOException, AlreadyConnectedException {
-        ipConnection.connect(host, port);
+    public void connect() {
+        try {
+            ipConnection.connect(host, port);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (AlreadyConnectedException e) {
+            e.printStackTrace();
+        }
     }
 }

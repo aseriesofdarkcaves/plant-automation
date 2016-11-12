@@ -1,7 +1,10 @@
 package com.asodc.tinkerforge.sensor;
 
 import com.asodc.tinkerforge.connection.Connection;
+import com.tinkerforge.AlreadyConnectedException;
 import com.tinkerforge.BrickletHumidity;
+
+import java.io.IOException;
 
 /**
  * Created by aseriesofdarkcaves on 11.11.2016.
@@ -10,9 +13,9 @@ public class HumiditySensor extends Sensor {
 
     private BrickletHumidity sensor;
 
-    public HumiditySensor(String uid, Connection connection) {
+    public HumiditySensor(String uid, Connection connection) throws IOException, AlreadyConnectedException {
         super(uid, connection);
-        this.sensor = new BrickletHumidity(this.uid, this.connection.getIPConnection());
+        sensor = new BrickletHumidity(this.uid, this.connection.getIPConnection());
         connect(connection);
         initSensorListener();
     }

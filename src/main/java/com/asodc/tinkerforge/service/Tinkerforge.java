@@ -26,7 +26,9 @@ public class Tinkerforge {
     }
 
     private static void startService() {
-        while (true) {}
+        while (true) {
+            // TODO: handle Exceptions gracefully
+        }
     }
 
     private static void setCallbackPeriod(long callbackPeriod) {

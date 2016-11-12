@@ -1,7 +1,10 @@
 package com.asodc.tinkerforge.sensor;
 
 import com.asodc.tinkerforge.connection.Connection;
+import com.tinkerforge.AlreadyConnectedException;
 import com.tinkerforge.BrickletTemperature;
+
+import java.io.IOException;
 
 /**
  * Created by aseriesofdarkcaves on 05.11.2016.
@@ -10,7 +13,7 @@ public class TemperatureSensor extends Sensor {
 
     private BrickletTemperature sensor;
 
-    public TemperatureSensor(String uid, Connection connection) {
+    public TemperatureSensor(String uid, Connection connection) throws IOException, AlreadyConnectedException {
         super(uid, connection);
         sensor = new BrickletTemperature(this.uid, this.connection.getIPConnection());
         connect(connection);
@@ -22,6 +25,7 @@ public class TemperatureSensor extends Sensor {
         sensor.addTemperatureListener(new BrickletTemperature.TemperatureListener() {
             @Override
             public void temperature(short temperature) {
+                // TODO: figure out why this seems to be the only callback method that works
                 System.out.println("Temperature: " + temperature / 100.0 + " °C");
             }
         });

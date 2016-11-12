@@ -3,7 +3,6 @@ package com.asodc.tinkerforge.sensor;
 import com.asodc.tinkerforge.connection.Connection;
 import com.asodc.tinkerforge.listener.SensorListener;
 import com.tinkerforge.AlreadyConnectedException;
-import com.tinkerforge.Device;
 
 import java.io.IOException;
 
@@ -20,14 +19,8 @@ abstract class Sensor implements SensorListener {
         this.connection = connection;
     }
 
-    void connect(Connection connection) {
-        try {
-            connection.connect();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (AlreadyConnectedException e) {
-            e.printStackTrace();
-        }
+    void connect(Connection connection) throws IOException, AlreadyConnectedException {
+        connection.connect();
     }
 
     public String getUID() {
