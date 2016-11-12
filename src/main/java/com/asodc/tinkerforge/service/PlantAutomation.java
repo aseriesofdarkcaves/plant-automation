@@ -22,10 +22,10 @@ public class PlantAutomation {
     private static final String TEMPERATURE_SENSOR_UID = "zky";
 
     public static void main(String[] args) throws IOException, AlreadyConnectedException {
-        attachTemperature();
+        attachAmbientLight();
         attachHumidity();
         attachMoisture();
-        attachAmbientLight();
+        attachTemperature();
         startService();
     }
 
