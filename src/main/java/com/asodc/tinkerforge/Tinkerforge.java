@@ -8,9 +8,9 @@ import java.io.IOException;
  */
 public class Tinkerforge {
 
-    private static final String HOST = "localhost";
+    private static final String HOST = "PlantAutomation";
     private static final int PORT = 4223;
-    private static final String UID = "qnV";
+    private static final String TEMPERATURE_SENSOR_UID = "zky";
     private static final long CALLBACK_PERIOD = 1000;
 
     private static IPConnection ipConnection;
@@ -21,7 +21,6 @@ public class Tinkerforge {
         initTemperatureSensor();
         connect();
         initTemperatureSensorListener();
-        initTerminationListener();
         setCallbackPeriod(CALLBACK_PERIOD);
         loop();
     }
@@ -30,13 +29,9 @@ public class Tinkerforge {
         while(true) {}
     }
 
-    private static void initTerminationListener() {
-        // TODO: add keyboard listener for when user hits ESC to kill program
-    }
-
     private static void setCallbackPeriod(long callbackPeriod) {
         try {
-            temperatureSensor.setTemperatureCallbackPeriod(CALLBACK_PERIOD);
+            temperatureSensor.setTemperatureCallbackPeriod(callbackPeriod);
         } catch (TimeoutException e) {
             e.printStackTrace();
         } catch (NotConnectedException e) {
@@ -63,7 +58,7 @@ public class Tinkerforge {
     }
 
     private static void initTemperatureSensor() {
-        temperatureSensor = new BrickletTemperature(UID, ipConnection);
+        temperatureSensor = new BrickletTemperature(TEMPERATURE_SENSOR_UID, ipConnection);
     }
 
     private static void initIPConnection() {

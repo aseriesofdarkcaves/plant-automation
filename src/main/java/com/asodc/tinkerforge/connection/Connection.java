@@ -35,5 +35,4 @@ public class Connection {
     public void connect() throws IOException, AlreadyConnectedException {
         ipConnection.connect(host, port);
     }
-
 }
