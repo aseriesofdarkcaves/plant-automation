@@ -1,27 +1,26 @@
 package com.asodc.tinkerforge.service;
 
 import com.tinkerforge.*;
+
 import java.io.IOException;
 
 /**
  * Created by aseriesofdarkcaves on 05.11.2016.
  */
-public class Tinkerforge {
+public class TestTemperature {
 
     private static final String HOST = "PlantAutomation";
     private static final int PORT = 4223;
-    private static final String TEMPERATURE_SENSOR_UID = "zky";
-    private static final long CALLBACK_PERIOD = 1000;
+    private static final String SENSOR_UID = "zky";
 
     private static IPConnection ipConnection;
     private static BrickletTemperature temperatureSensor;
 
     public static void main(String[] args) {
         initIPConnection();
-        initTemperatureSensor();
+        initSensor();
         connect();
-        initTemperatureSensorListener();
-        setCallbackPeriod(CALLBACK_PERIOD);
+        initSensorListener();
         startService();
     }
 
@@ -31,18 +30,9 @@ public class Tinkerforge {
         }
     }
 
-    private static void setCallbackPeriod(long callbackPeriod) {
-        try {
-            temperatureSensor.setTemperatureCallbackPeriod(callbackPeriod);
-        } catch (TimeoutException e) {
-            e.printStackTrace();
-        } catch (NotConnectedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private static void initTemperatureSensorListener() {
+    private static void initSensorListener() {
         temperatureSensor.addTemperatureListener(new BrickletTemperature.TemperatureListener() {
+            @Override
             public void temperature(short temperature) {
                 System.out.println("Temperature: " + temperature / 100.0 + " °C");
             }
@@ -59,8 +49,8 @@ public class Tinkerforge {
         }
     }
 
-    private static void initTemperatureSensor() {
-        temperatureSensor = new BrickletTemperature(TEMPERATURE_SENSOR_UID, ipConnection);
+    private static void initSensor() {
+        temperatureSensor = new BrickletTemperature(SENSOR_UID, ipConnection);
     }
 
     private static void initIPConnection() {
