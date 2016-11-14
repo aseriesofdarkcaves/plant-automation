@@ -26,7 +26,7 @@ public class HumiditySensor extends Sensor {
             @Override
             public void humidity(int humidity) {
                 // TODO: dicern value and conversion factor, if any
-                System.out.println("Humidity: " + humidity);
+                System.out.println("Humidity: " + humidity / 10.0 + " %RH");
             }
         });
     }

@@ -26,7 +26,7 @@ public class MoistureSensor extends Sensor {
             @Override
             public void moisture(int moisture) {
                 // TODO: dicern value and conversion factor, if any
-                System.out.println("Moisture: " + moisture);
+                System.out.println("Moisture: " + moisture + " Units");
             }
         });
     }

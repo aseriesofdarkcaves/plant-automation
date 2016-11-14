@@ -13,7 +13,6 @@ import java.io.IOException;
  * Created by aseriesofdarkcaves on 06/11/2016.
  */
 public class PlantAutomation {
-
     private static final String HOST = "PlantAutomation";
     private static final int PORT = 4223;
     private static final String AMBIENT_LIGHT_SENSOR_UID = "yC3";

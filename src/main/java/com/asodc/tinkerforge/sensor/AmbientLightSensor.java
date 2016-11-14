@@ -26,7 +26,7 @@ public class AmbientLightSensor extends Sensor {
             @Override
             public void illuminance(long illuminance) {
                 // TODO: dicern value and conversion factor, if any
-                System.out.println("Illuminance: " + illuminance);
+                System.out.println("Illuminance: " + illuminance / 100.0 + " Lux");
             }
         });
     }
