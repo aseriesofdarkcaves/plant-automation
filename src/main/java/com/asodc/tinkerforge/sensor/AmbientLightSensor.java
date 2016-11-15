@@ -25,7 +25,6 @@ public class AmbientLightSensor extends Sensor {
         sensor.addIlluminanceListener(new BrickletAmbientLightV2.IlluminanceListener() {
             @Override
             public void illuminance(long illuminance) {
-                // TODO: dicern value and conversion factor, if any
                 System.out.println("Illuminance: " + illuminance / 100.0 + " Lux");
             }
         });

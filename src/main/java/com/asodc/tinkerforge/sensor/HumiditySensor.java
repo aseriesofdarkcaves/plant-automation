@@ -25,7 +25,6 @@ public class HumiditySensor extends Sensor {
         sensor.addHumidityListener(new BrickletHumidity.HumidityListener() {
             @Override
             public void humidity(int humidity) {
-                // TODO: dicern value and conversion factor, if any
                 System.out.println("Humidity: " + humidity / 10.0 + " %RH");
             }
         });

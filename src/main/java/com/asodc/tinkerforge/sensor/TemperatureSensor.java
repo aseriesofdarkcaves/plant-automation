@@ -25,7 +25,6 @@ public class TemperatureSensor extends Sensor {
         sensor.addTemperatureListener(new BrickletTemperature.TemperatureListener() {
             @Override
             public void temperature(short temperature) {
-                // TODO: figure out why this seems to be the only callback method that works
                 System.out.println("Temperature: "+ temperature / 100.0 + " °C");
             }
         });

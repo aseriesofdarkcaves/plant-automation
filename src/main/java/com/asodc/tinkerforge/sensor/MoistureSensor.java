@@ -25,7 +25,6 @@ public class MoistureSensor extends Sensor {
         sensor.addMoistureListener(new BrickletMoisture.MoistureListener() {
             @Override
             public void moisture(int moisture) {
-                // TODO: dicern value and conversion factor, if any
                 System.out.println("Moisture: " + moisture + " Units");
             }
         });
