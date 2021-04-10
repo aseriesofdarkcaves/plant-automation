@@ -5,11 +5,7 @@ import com.tinkerforge.IPConnection;
 
 import java.io.IOException;
 
-/**
- * Created by aseriesofdarkcaves on 05.11.2016.
- */
 public class Connection {
-
     private String host;
     private int port;
     private IPConnection ipConnection;
