@@ -5,11 +5,7 @@ import com.tinkerforge.AlreadyConnectedException;
 
 import java.io.IOException;
 
-/**
- * Created by aseriesofdarkcaves on 05.11.2016.
- */
 abstract class Sensor implements SensorListener {
-
     String uid;
     Connection connection;
 
