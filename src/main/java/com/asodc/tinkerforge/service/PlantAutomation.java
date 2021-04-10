@@ -9,9 +9,6 @@ import com.tinkerforge.AlreadyConnectedException;
 
 import java.io.IOException;
 
-/**
- * Created by aseriesofdarkcaves on 06/11/2016.
- */
 public class PlantAutomation {
     private static final String HOST = "PlantAutomation";
     private static final int PORT = 4223;
