@@ -6,11 +6,7 @@ import com.tinkerforge.BrickletMoisture;
 
 import java.io.IOException;
 
-/**
- * Created by aseriesofdarkcaves on 11.11.2016.
- */
 public class MoistureSensor extends Sensor {
-
     private BrickletMoisture sensor;
 
     public MoistureSensor(String uid, Connection connection) throws IOException, AlreadyConnectedException {
