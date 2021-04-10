@@ -6,11 +6,7 @@ import com.tinkerforge.BrickletAmbientLightV2;
 
 import java.io.IOException;
 
-/**
- * Created by aseriesofdarkcaves on 11.11.2016.
- */
 public class AmbientLightSensor extends Sensor {
-
     private BrickletAmbientLightV2 sensor;
 
     public AmbientLightSensor(String uid, Connection connection) throws IOException, AlreadyConnectedException {
