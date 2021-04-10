@@ -6,11 +6,7 @@ import com.tinkerforge.BrickletHumidity;
 
 import java.io.IOException;
 
-/**
- * Created by aseriesofdarkcaves on 11.11.2016.
- */
 public class HumiditySensor extends Sensor {
-
     private BrickletHumidity sensor;
 
     public HumiditySensor(String uid, Connection connection) throws IOException, AlreadyConnectedException {
