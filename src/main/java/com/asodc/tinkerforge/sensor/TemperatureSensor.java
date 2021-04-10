@@ -6,11 +6,7 @@ import com.tinkerforge.BrickletTemperature;
 
 import java.io.IOException;
 
-/**
- * Created by aseriesofdarkcaves on 05.11.2016.
- */
 public class TemperatureSensor extends Sensor {
-
     private BrickletTemperature sensor;
 
     public TemperatureSensor(String uid, Connection connection) throws IOException, AlreadyConnectedException {
