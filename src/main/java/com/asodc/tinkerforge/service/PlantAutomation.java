@@ -17,7 +17,7 @@ public class PlantAutomation {
     private static final String MOISTURE_SENSOR_UID = "zU3";
     private static final String TEMPERATURE_SENSOR_UID = "zky";
 
-    public static void main(String[] args) throws IOException, AlreadyConnectedException {
+    public static void main(final String... args) throws IOException, AlreadyConnectedException {
         attachAmbientLight();
         attachHumidity();
         attachMoisture();
